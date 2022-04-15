@@ -1,0 +1,655 @@
+/* CSS FILE
+/////////////////////////////////////////////////////////////////////////
+/// INDEX / TABLA DE CONTENIDO ///
+
+//////////////////////// 1. GENERALES
+///// 1.1 RESETS
+///// 1.2 HEADER
+///// 1.3 FOOTER
+///// 1.4 ERROR HANDLING
+///// 1.5 EFECTOS
+
+//////////////////////// 2. FRONT END INSTALL
+///// 2.1 INSTALL DONE
+
+//////////////////////// 3. MAP STYLES
+///// 3.1 SVG AREAS
+
+//////////////////////// 4. DEPARTAMENTO
+///// 4.1 
+
+*/
+
+html { 
+	width: 100%; 
+	height: 100%; 
+}
+body { 
+	margin: 0px; 
+	padding: 0px; 
+	width: 100%; 
+	height: 100%;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	/* font-family: 'Roboto Condensed', sans-serif; */
+}
+@media (max-width: 2000px) { html { font-size: 16px; } }
+@media (max-width: 1400px) { html { font-size: 14px; } }
+@media (max-width: 1000px) { html { font-size: 12px; } }
+
+
+/*/////////////// 1. GENERALES */
+
+/*/// 1.1 RESETS*/
+input[type=text], input[type=password] {
+	border: 1px solid #cecece;
+	padding: 0px;
+	text-indent: 5px;
+}
+
+/*/// 1.2 HEADER */
+#header {
+	width: 100%; 
+	height: 100px;
+	background: #0e1b3c;
+	color: #fff;
+	display: flex;
+	text-align: center;
+}
+#header #logo {
+	flex: 30%;
+}
+#header #app_title {
+	flex: 70% 0 0;
+	font-size: 2rem;
+	text-transform: uppercase;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+#header #app_title div {
+	margin-top: 10px;
+}
+#header #app_title #app_subtitle {
+	font-size: 1rem;
+	font-weight: 300;
+	font-family: 'Roboto', sans-serif;
+}
+#header a {
+	height: 64px;
+	margin-top: 18px;
+	display: inline-block;
+}
+#header a img {
+	height: 100%;
+}
+/*/// 1.3 FOOTER */
+#footer {
+	position: relative;
+	width: 100%;
+	height: 40px;
+	background: #0e1b3c;
+	text-align: center;
+	color: #fff;
+}
+#footer p {
+	line-height: 40px;
+	margin: 0px;
+	padding: 0px;
+}
+#footer a {
+	cursor: pointer;
+	display: inline-block;
+	color: #fff;
+	text-decoration: none;
+}
+#footer a:hover, #footer a:focus {
+	color: #fcc804;
+}
+#ty {
+	font-size: 1.5rem;
+	padding: 30px;
+
+}
+
+/*/// 1.4 ERROR HANDLING */
+.install_error {
+	width: calc(60% - 20px);
+	padding: 10px;
+	margin-left: 20%;
+	margin-top: 15px;
+	margin-bottom: 10px;
+	border-radius: 20px;
+	color: #FFE622;
+	background: #D60000;
+	text-align: center;
+}
+
+/*/// 1.5 EFECTOS */
+.top-box {
+    box-shadow: inset 0 7px 15px -7px rgba(0,0,0,0.9);
+}
+.left-box {
+    box-shadow: inset 7px 0 15px -7px rgba(0,0,0,0.9);
+}
+.right-box {
+    box-shadow: inset -7px 0 15px -7px rgba(0,0,0,0.9);
+}
+.bottom-box {
+    box-shadow: inset 0 -7px 15px -7px rgba(0,0,0,0.9);
+}
+.sombra {
+	box-shadow: 7px 7px 10px 0px rgba(0,0,0,0.7);
+}
+
+/*/////////////// 2. FRONT END INSTALL*/
+#install_app {
+	width: 100%;
+	min-height: 100%;
+	background: #39507a;
+	float: left;
+}
+#install_wrap {
+	display: flex;
+	align-items: center; 
+	justify-content: center;
+	margin: 20px 0;
+}
+#install_tit {
+	font-size: 2rem;
+	font-family: 'Roboto Condensed', sans-serif;
+	text-align: center;
+}
+#install_wrap form, #install_done {
+	width: 60%;
+	padding: 20px;
+	border-radius: 20px;
+	background: #fff;
+}
+#dbinfo, #userinfo {
+	background-color: #F3D35F;
+	float: left;
+	padding: 10px;
+	width: calc(100% - 20px);
+	margin: 10px 0px;
+}
+#install_wrap form label {
+	width: 32%;
+	margin-right: 3%;
+	float: left;
+	height: 1.5rem;
+	text-align: right;
+	margin-bottom: 10px;
+}
+#install_wrap form input {
+	width: calc(60% - 2px);
+	margin-right: 5%;
+	float: left;
+	height: 1.5rem;
+	margin-bottom: 10px;
+}
+#install_wrap form select {
+	width: 30%; 
+	margin-right: 30%;
+	float: left;
+	height: 1.5rem;
+	margin-bottom: 10px;
+}
+#install_wrap form button[type=submit] {
+	height: 2.5rem; 
+	text-transform: uppercase;
+	width: auto;
+	padding:5px 10px;
+	color: #fff;
+	background-color: #0e1b3c;
+	font-size: 1.1rem;
+	border: none;
+	border-radius: 5px;
+	float: right;
+	cursor: pointer;
+}
+#install_wrap form button[type=submit]:focus, #install_wrap form button[type=submit]:hover {
+	color: #F3D35F;
+}
+.formtitle {
+	width: 90%; 
+	margin-left: 5%;
+	padding-bottom: 10px;
+	border-bottom: dotted 1px #000;
+	margin-bottom: 10px;
+}
+#textarea {
+	width: 90%; 
+	margin-left: 5%;
+	float: left;
+	margin-bottom: 10px;
+}
+
+/*///// 2.1 INSTALL DONE */
+#done_artbody {
+	margin-bottom: 15px;
+	font-size: 2rem;
+}
+#done_buttons a {
+	padding: 10px;
+	text-transform: uppercase;
+	font-size: 1rem;
+	text-decoration: none;
+	float: left;
+	margin-right: 20px;
+	background-color: #0e1b3c;
+	border-radius: 3px;
+	color: #fff;
+}
+#done_buttons a i {
+	margin-right: 5px; 
+	padding-right: 5px;
+	border-right: solid thin #fff;
+}
+#done_buttons a:hover, #done_buttons a:focus {
+	color: #F3D35F;
+}
+
+/*/////////////// 3. MAP STYLES */
+#mapflex {
+	display: flex;
+	background: url('../images/textura_tejido.jpg');
+	height: calc(100% - 140px);
+}
+.flexor {
+	flex: 1;
+}
+.mapwrap {
+	padding: 15px;
+}
+.centerflex {
+	display: flex;
+	align-items: center; 
+	justify-content: center; 
+	text-align: center;
+}
+#tejidohumano {
+	position: absolute;
+	bottom: 0;
+	left:0;
+	transition: all 1s ease-out;
+	height: 100%;
+	width: 100%;
+	font-size: 5rem;
+}
+#img_portada {
+	width: 60%;
+}
+#img_portada img {
+	width: 100%;
+}
+#articulo {
+	position: absolute;
+	top:100%;
+	left:0;
+	transition: all 1s ease-out;
+}
+#closesaludo {
+	text-align: center;
+	width: 100%;
+	height: 3rem;
+	margin-bottom: 10px;
+}
+#artbtn {
+	height: 3rem;
+	padding: 0 15px;
+	font-size: 2rem;
+	line-height: 3rem;
+	text-align: center;
+	cursor: pointer;
+	background: #0e1b3c!important;
+	color: #fff;
+}
+.down {
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	position: absolute;
+	left: 50%;
+}
+.up {
+	position: absolute;
+	bottom: 0px;
+	left: 30%;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+#artbody p, #artbody div, #artbody span {
+	background: transparent!important;
+}
+#articulo {
+	width: 90%;
+	height: 100%;
+	overflow: scroll;
+	margin-left: 5%;
+	font-size: 1rem;
+	line-height: 1.2rem;
+}
+#artbody {
+	margin-bottom: 15px;
+}
+#articulo #title {
+	margin-bottom: 10px;
+	font-size: 2rem; 
+}
+#elem1 {
+	background-color: #fff;
+	overflow: hidden;
+	position: relative;
+}
+#elem2 {
+	overflow: scroll;
+}
+#elem2 svg {
+	height: 100%;
+	display: block;
+	margin: 0 auto;
+}
+
+.tejidoculto #tejidohumano {
+	bottom: 100%;
+}
+.tejidoculto #articulo {
+	top: 0%;
+}
+
+/*// 3.1 SVG AREAS */
+#ustacol {
+	fill: #d4e2b6;
+}
+#ustacol path {
+	 stroke: #fff;
+     stroke-width: 1;
+}
+#ustacol a {
+	fill: #9fc6af;
+	cursor: pointer;
+}
+#ustacol a:hover, #ustacol a:focus {
+	fill: #75b1b6;
+}
+
+/*/////////////// 4. DEPARTAMENTO */
+.year {
+	margin-bottom: 10px;
+	width: 100%;
+}
+.yearbtn {
+	width: calc(100% - 16px);
+	padding: 0 7px;
+	border: 1px solid #000;
+	background: #fff;
+	cursor: pointer;
+	line-height: 2rem;
+	height: 2rem;
+	color: #67676b;
+}
+.yearbtn:hover, .yearbtn:focus {
+	background: #3B8CC4;
+	color: #fff;
+}
+.yerbtn {
+	float: right;
+	margin-right: 10px;
+	color: #233C6B;
+}
+.yearcont {
+	max-height: 0px;
+	transition: max-height 1s ease-out;
+	overflow: hidden;
+	background: #fff;
+	border-bottom: 1px solid #000;
+	border-left: 1px solid #000;
+	border-right: 1px solid #000;
+}
+.unhid {
+	max-height: 3000px;
+	transition: max-height 2s ease-in;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOutFromLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.unload #menu_reg_years {
+	 /* This section calls the slideInFromLeft animation we defined above */
+  animation: 1s ease-out 0s 1 slideOutFromLeft;
+  transform: translateX(-100%);
+}
+
+.loaded #menu_reg_years {  
+  /* This section calls the slideInFromLeft animation we defined above */
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+#deptowrap {
+	width: 100%;
+	height: calc(100% - 140px);
+	overflow: hidden;
+	position: relative;
+}
+#deptowrap #reopener {
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 20px;
+	background: url('../images/reopener.png');
+	text-align: center;
+	line-height: 40px;
+	font-size: 1rem;
+	cursor: pointer;
+	color: #fff;
+	z-index: 10;
+}
+#reopener:hover, #reopener:focus {
+	color: #0e1b3c!important;
+}
+#deptowrap #menu_reg_years {
+	position: absolute;
+	left: 0;
+	top: 10px;
+	height: calc(100% - 20px);
+	width: 50%;
+	background: #fff;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	z-index: 10;
+	overflow: hidden;
+}
+#menu_reg_years #flexcontainer {
+	display: flex;
+	height: 100%;
+	width: 100%;
+	float: left;
+}
+#menu_reg_years #yearlist {
+	flex: calc(100% - 80px) 0 0;
+	background: #e7eaec;
+	padding: 10px;
+	overflow-y: scroll;
+    white-space: nowrap;
+}
+#menu_reg_years #regsubmenu {
+	flex: 60px 0 0;
+	position: relative;
+	background: url('../images/textura_tejido.jpg');
+	display: flex;
+	align-items: center; 
+	justify-content: center;
+}
+#navigation {
+	position: absolute;
+	top: 10px;
+	right: 0px;
+}
+#navigation div {
+	background: url('../images/navmenu.png');
+	height: 40px;
+	width: 40px;
+	text-align: center;
+	line-height: 40px;
+	font-size: 1rem;
+	cursor: pointer;
+	margin-top: 10px;
+	color: #fff;
+}
+#navigation div:hover, #navigation div:focus, #navigation a:hover, #navigation a:focus {
+	color: #0e1b3c;
+}
+#navigation a {
+	color: #fff;
+}
+#regsubmenu .btn {
+	height: 60px;
+	width: 60px;
+	background: url('../images/tejidobtn.png');
+	color: #000;
+	display: flex;
+	align-items: center; 
+	justify-content: center;
+	font-size: 2rem;
+}
+
+#departamento {
+	width: 100%; 
+	height: 100%;
+}
+#deptbg {
+	width: 100%; 
+	height: 100%;
+	position: relative;
+}
+#deptbg img {
+	width: 100%;
+}
+#deptit { 
+	position: absolute;
+	top: 0;
+	right: 0px;
+	font-size: 5rem;
+	text-transform: uppercase;
+	font-family: 'Roboto Condensed', sans-serif;
+	color: #fff;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black
+}
+.yearcont div:nth-child(even) { 
+	background-color: #CBCBCB; 
+}
+
+.yearcont div {
+	padding: 10px;
+	overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+.yearcont div:hover, .yearcont div:focus {
+	background: #F3D35F;
+}
+.yearcont div i {
+	margin-right: 5px;
+}
+
+#proyoverlay {
+	display: flex;
+	align-items: center; 
+	justify-content: center;
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.7);
+	z-index: 20;
+}
+
+#proyecontenido {
+	width: 66%;
+	height: calc(100% - 30px);
+	padding: 5px;
+	background: #fff;
+	z-index: 30;
+	border-radius: 10px;
+}
+
+.hidden {
+	height: 0!important;
+	width: 0!important;
+}
+.hidden #proyecontenido {
+	height: 0!important;
+	width: 0!important;
+	display: none;
+}
+
+#proytit {
+	width: 100%;
+	text-align: center;
+	color: #233C6B;
+	font-size: 2rem;
+	text-transform: uppercase;
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+	border-bottom: dashed 1px #ccc;
+}
+#flexrow {
+	display: flex;
+}
+#fechas {
+	flex: 50% 0 0;
+	font-size: 0.8rem;
+}
+#lider {
+	flex: 50% 0 0;
+	font-size: 0.8rem;
+}
+#cau {
+	flex: 50% 0 0;
+	font-size: 0.8rem;
+}
+#municipio {
+	flex: 50% 0 0;
+	font-size: 0.8rem;
+}
+#objetivo {
+	margin-top: 10px;
+	font-size: 0.9rem;
+	line-height: 1.2rem;
+	color: #3c3c3c;
+	margin-bottom: 10px;
+}
+#datarow {
+	font-size: 0.9rem;
+}
+#foto {
+	width: 40%;
+}
+#foto img {
+	width: 100%;
+}
+#close  {
+	width: 100%;
+	height: 2rem;
+	line-height: 2rem;
+}
+#close i {
+	font-size: 1.5rem;
+	color: #D60000;
+	cursor: pointer;
+}

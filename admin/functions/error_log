@@ -1,0 +1,2 @@
+[04-Aug-2020 20:42:34 UTC] PHP Warning:  unlink(../../img/huila/): Is a directory in /home/comunikvuad/public_html/34-tejido/admin/functions/d_element.php on line 182
+[04-Aug-2020 20:46:23 UTC] PHP Warning:  rmdir(../../img/amazonas): Directory not empty in /home/comunikvuad/public_html/34-tejido/admin/functions/d_element.php on line 77
